@@ -89,9 +89,9 @@
     <Content Include="docs\MySqlTransaction.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dal\Dal.csproj">
+    <ProjectReference Include="..\Dal\DAL.csproj">
       <Project>{84adf8ab-1ac0-4d5a-abac-b5f63afbcd9e}</Project>
-      <Name>Dal</Name>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{aa20d129-39f4-4a9a-9a3d-5bac3d0a703f}</Project>

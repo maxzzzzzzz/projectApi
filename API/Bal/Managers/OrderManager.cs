@@ -16,10 +16,32 @@ namespace Bal.Managers
 
         }
         //Не знаю или будет такое работать
-        public List<string> GetAll()
+        public List<Order> GetAll()
         {
-            var orders = new List<string>(new string[] { uow.OrderRepo.GetAll().ToString() });
-            return orders;
+            /*var list = uow.OrderRepo.GetAll();
+            return (List<Order>)list;*/
+
+            /*var orders = new List<string>(new string[] { uow.OrderRepo.GetAll().ToString() });
+            return orders;*/
+
+            List<Order> li = new List<Order>();
+            var details = uow.OrderRepo.GetAll().ToList();
+            if (details != null)
+            {
+                Parallel.ForEach(details, x =>
+                {
+                    Order obj = new Order();
+                    obj.Id = x.Id;
+                    obj.Name = x.Name;
+                    li.Add(obj);
+
+                });
+                return li;
+            }
+            else
+            {
+                return li;
+            }
         }
         public Order Find(int id)
         {

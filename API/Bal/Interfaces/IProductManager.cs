@@ -9,7 +9,7 @@ namespace Bal.Interfaces
 {
     public interface IProductManager
     {
-        List<string> GetAll();
+        List<Product> GetAll();
         Product Find(int id);
         void CreateProduct(Product product);
         void DeleteProduct(int id);

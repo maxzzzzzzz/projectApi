@@ -9,7 +9,7 @@ namespace Bal.Interfaces
 {
     public interface IOrderManager
     {
-        List<string> GetAll();
+        List<Order> GetAll();
         Order Find(int id);
         void CreateOrder(Order order);
         void DeleteOrder(int id);

@@ -9,7 +9,7 @@ namespace Bal.Interfaces
 {
     public interface ICustomerManager
     {
-        List<string> GetAll();
+        List<Customer> GetAll();
         Customer Find(int id);
         void CreateCustomer(Customer product);
         void DeleteCustomer(int id);
